@@ -1,10 +1,7 @@
 function hasCycle(graph) {
     let seenNode = new Array(graph.length).fill(false)
     for (let i = 0; i < graph.length; i++) {
-        if (!seenNode[i]){
-
-            if (checkNode(i, [],graph,seenNode)) { return true}
-        }
+        if (!seenNode[i] && checkNode(i, [],graph,seenNode)) { return true}
     }
     return false
 }
